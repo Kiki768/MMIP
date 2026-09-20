@@ -1,4 +1,9 @@
 # MMIP HW1
+## 作業說明
+Quiz 1:彩色影像轉灰階影像
+Quiz 2:Histogram Equalization
+Quiz 3:梯形校正與透視轉換
+Quiz 4:影像拼接
 ## 專案結構
 ```text
 HW1/

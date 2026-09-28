@@ -1,0 +1,12 @@
+# 虛擬環境（很大，不要上傳）
+.venv/
+
+# Python 快取
+__pycache__/
+*.pyc
+
+# Notebook 自動備份
+.ipynb_checkpoints/
+
+# VS Code 個人設定
+.vscode/

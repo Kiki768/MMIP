@@ -1,0 +1,7 @@
+__pycache__/
+.ipynb_checkpoints/
+*.npy
+checkpoints/*
+!checkpoints/plain_base.pt
+!checkpoints/resnet18_base.pt
+!checkpoints/exp_res_lr1e-4.pt

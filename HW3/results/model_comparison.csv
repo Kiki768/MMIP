@@ -1,0 +1,3 @@
+Model,Params (M),Test Top-1,Test Top-5,Macro-AUC
+Plain CNN,0.3984,0.4274,0.7917,0.9255
+ResNet18 (pretrained),11.1955,0.9098,0.9901,0.9969

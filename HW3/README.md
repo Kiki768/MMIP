@@ -50,6 +50,7 @@ HW3/
 * tqdm
 
 ## 執行方式
+開啟 Jupyter Notebook 循序執行 main.ipynb
 
 
 

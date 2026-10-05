@@ -7,6 +7,7 @@
 ## 專案結構 (Project Structure)
 
 ```text
+HW3/
 ├── checkpoints/             # 存放各模型權重
 ├── images                   # 資料集
 ├── results                  # 訓練、評估後的結果

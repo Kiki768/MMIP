@@ -44,8 +44,17 @@
 - 安裝套件:
 
 ```bash
-pip install -r requirements.txt
-pip install tqdm nltk google-genai
+bert-score==0.3.13
+google-genai==2.29.0
+matplotlib==3.11.2
+nltk==3.10.3
+numpy==2.5.2
+pandas==3.0.6
+pillow==12.3.0
+scikit-learn==1.9.1
+torch==2.5.1+cu121
+torchvision==0.20.1+cu121
+tqdm==4.70.1
 ```
 
 ## 執行方式

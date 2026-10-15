@@ -43,32 +43,4 @@ pip install torch torchvision transformers numpy pandas matplotlib \
 
 ## 執行方式
 
-1. 以 Jupyter 或 VS Code 開啟 `main.ipynb`（notebook 需放在 `HW5/` 根目錄）。
-2. 在「參數設定」cell 修改 `parse_args([...])`：
-
-```python
-args = parse_args([
-    "--task", "all",          # all / quiz1 / quiz2 / quiz3
-    "--device", "cuda",       # auto / cpu / cuda / mps
-    # "--quick",              # 小資料冒煙測試，確認流程可跑通
-])
-```
-
-3. 由上而下依序執行各 cell。某個 Quiz 失敗時只會印出原因，不影響其他 Quiz。
-
-常用參數：
-
-| 參數 | 說明 | 預設 |
-|---|---|---|
-| `--task` | 要執行的任務 | all |
-| `--device` | 運算裝置 | auto |
-| `--quiz1_num_query` | Quiz 1 的 Query 數量 | 100 |
-| `--quiz1_gallery_size` | Quiz 1 的 Gallery 張數 | train 全部 |
-| `--quiz2_combos` | Quiz 2 的模型組合（A / B / C） | A B |
-| `--quiz2_epochs` | Quiz 2 訓練 epoch 數 | 5 |
-| `--quiz2_finetune` | Quiz 2 解凍骨幹端到端微調 | 關閉 |
-| `--quiz3_epochs` | Quiz 3 訓練 epoch 數 | 3 |
-| `--quiz3_week4_baseline` | Week 4 baseline 指標 JSON 路徑 | `result/quiz3/week4_baseline.json` |
-| `--num_workers` | DataLoader 執行緒數（Windows 出錯請設 0） | 2 |
-
-執行結果會存放在 `result/quiz1/`、`result/quiz2/`、`result/quiz3/`。
+依序執行 main.ipynb 中各 Quiz 的儲存格

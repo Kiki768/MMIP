@@ -25,7 +25,7 @@ HW5/
 │   ├── quiz1/                 # retrieval_samples.png、metrics.csv
 │   ├── quiz2/                 # metrics.csv、training_curves.png、prediction_samples_*.png
 │   └── quiz3/                 # caption_samples.png、metrics.csv、generated_captions.csv
-├── main.ipynb                 # 統一入口
+├── main.ipynb                 
 └── README.md
 ```
 

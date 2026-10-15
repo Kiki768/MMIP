@@ -39,8 +39,6 @@ pip install torch torchvision transformers numpy pandas matplotlib \
             scikit-learn nltk bert-score tqdm pillow ipywidgets
 ```
 
-首次執行會自動下載預訓練模型（ResNet-50、ViT-B/16、`bert-base-uncased`、`openai/clip-vit-base-patch32`、`gpt2`，以及 BERTScore 使用的 `roberta-large`），需要網路連線。建議使用 GPU 執行。
-
 ## 執行方式
 
 依序執行 main.ipynb 中各 Quiz 的儲存格

@@ -1,0 +1,7 @@
+﻿id,text,true_label,pred_label,hateful_prob,correct
+83045,"so much trash, we need a garbage collector",1,0,0.3189,False
+18306,white kids kids dreaming about their first day of school,1,0,0.1058,False
+43910,i just started a company selling landmines that look like prayer mats prophets are going through the roof,1,1,0.6435,True
+68401,when you date an asian boy and you trynna get his family to accept you,0,0,0.1498,True
+16842,every kitchen needs a sandwich maker just like this one,0,1,0.8628,False
+95038,when you take these pics we think about cumming in your mouth,0,0,0.3872,True

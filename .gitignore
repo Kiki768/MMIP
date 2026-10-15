@@ -1,0 +1,12 @@
+# 虛擬環境與快取
+.venv/
+.venv-windows/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# 大型模型權重檔
+*.pt
+*.pth
+*.bin

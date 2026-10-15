@@ -1,0 +1,3 @@
+﻿Model,Feature Dim,Params (M),Query / Gallery,Top-1 Acc (%),Top-5 Acc (%),Precision@5 (%),Extract Time (s)
+ResNet-50 (CNN),2048,23.51,10000 / 50000,86.01,96.27,83.05,159.0
+ViT-B/16 (Transformer),768,85.8,10000 / 50000,93.33,98.15,91.89,179.3

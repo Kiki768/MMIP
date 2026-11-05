@@ -1,0 +1,3 @@
+model,weights_mib,torch_start_alloc_mib,torch_peak_alloc_mib,torch_peak_reserved_mib,elapsed_s,nvml_avg_used_mib,nvml_peak_used_mib,nvml_num_samples
+Qwen/Qwen2-VL-7B-Instruct,15814.6,15858.7,16707.2,17042.0,86.453,17947.6,17994.9,1719
+llava-hf/llava-v1.6-mistral-7b-hf,14432.4,14441.7,18713.0,22538.0,277.598,20818.1,23492.9,5523

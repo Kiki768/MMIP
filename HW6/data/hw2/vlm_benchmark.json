@@ -1,0 +1,207 @@
+[
+  {
+    "id": "CLS-01", "category": "影像分類",
+    "image": "images/coco_000000000285.jpg",
+    "image_url": "http://images.cocodataset.org/val2017/000000000285.jpg",
+    "image_type": "COCO 自然影像：單一大型動物特寫",
+    "prompt": "這張圖片中的主要動物是什麼？請從以下選項中選出一項：(A) 獅子 (B) 棕熊 (C) 狗 (D) 北極熊。先回答選項字母，再用一句話說明判斷依據。",
+    "reference": "(B) 棕熊。依據：圓耳、厚實的淺棕色毛皮、熊的吻部與黑色鼻子，背景為草地。",
+    "keywords": [["B", "棕熊", "brown bear"]],
+    "judge_dims": ["正確性", "理由合理性"]
+  },
+  {
+    "id": "CLS-02", "category": "影像分類",
+    "image": "images/coco_000000000776.jpg",
+    "image_url": "http://images.cocodataset.org/val2017/000000000776.jpg",
+    "image_type": "COCO 自然影像：同類物品堆疊（分類＋計數）",
+    "prompt": "圖中的物品屬於哪一類？一共有幾個？請簡短回答。",
+    "reference": "泰迪熊／絨毛熊玩偶，共 3 隻（左上淺棕、右上金黃、下方橘棕）。",
+    "keywords": [["泰迪熊", "熊玩偶", "絨毛", "teddy"], ["3", "三"]],
+    "judge_dims": ["類別正確", "計數正確"]
+  },
+  {
+    "id": "CLS-03", "category": "影像分類",
+    "image": "images/coco_000000002153.jpg",
+    "image_url": "http://images.cocodataset.org/val2017/000000002153.jpg",
+    "image_type": "COCO 自然影像：運動場景",
+    "prompt": "這張照片是哪一種運動？畫面捕捉的是比賽中的哪個環節？",
+    "reference": "棒球。投手正在投球（或剛完成投球動作），打擊者在本壘板旁準備揮棒，後方有蹲著的捕手與主審。",
+    "keywords": [["棒球", "baseball"], ["投", "pitch"]],
+    "judge_dims": ["運動類別", "動作/環節理解"]
+  },
+  {
+    "id": "CLS-04", "category": "影像分類",
+    "image": "images/coco_000000002261.jpg",
+    "image_url": "http://images.cocodataset.org/val2017/000000002261.jpg",
+    "image_type": "COCO 自然影像：戶外場景分類",
+    "prompt": "請將此圖的場景分類為以下之一：室內、海灘/海洋、山區、城市街道。並說明圖中人物正在做什麼。",
+    "reference": "海灘/海洋。一名穿黑色上衣的男子趴在藍色趴板（bodyboard）上衝浪，正被浪頭推進。",
+    "keywords": [["海", "ocean", "beach", "sea"], ["衝浪", "趴板", "surf", "bodyboard"]],
+    "judge_dims": ["場景類別", "活動描述"]
+  },
+  {
+    "id": "CLS-05", "category": "影像分類",
+    "image": "images/coco_000000003156.jpg",
+    "image_url": "http://images.cocodataset.org/val2017/000000003156.jpg",
+    "image_type": "COCO 自然影像：黑白照片（色彩/場所/行為多標籤）",
+    "prompt": "請回答三件事：1) 這張照片是彩色還是黑白？2) 拍攝場所是什麼房間？3) 人物可能在做什麼？",
+    "reference": "1) 黑白照片；2) 浴室／廁所（有馬桶、洗手台、黑白格紋磁磚）；3) 一名戴手套的男子蹲著在安裝或維修馬桶。",
+    "keywords": [["黑白", "black and white", "grayscale", "monochrome"], ["浴室", "廁所", "洗手間", "bathroom", "restroom"], ["馬桶", "toilet"]],
+    "judge_dims": ["色彩判斷", "場所", "行為推論"]
+  },
+
+  {
+    "id": "LOC-01", "category": "物件位置/偵測",
+    "image": "images/coco_000000039769.jpg",
+    "image_url": "http://images.cocodataset.org/val2017/000000039769.jpg",
+    "image_type": "COCO 自然影像：多物件計數與相對位置",
+    "prompt": "圖中有幾隻貓、幾個遙控器？請分別描述牠們/它們在畫面中的大致位置（例如左上、中央、右下）。",
+    "reference": "2 隻貓、2 個遙控器。左邊的貓伸展側躺，佔畫面左半部，頭在中上方；右邊的貓體型較大，佔右半部，頭朝下在中下方。一個遙控器在左上角，另一個在畫面上方中央、兩隻貓之間。",
+    "keywords": [["2 隻貓", "兩隻貓", "two cats", "2 cats"], ["2 個遙控器", "兩個遙控器", "two remote", "2 remote"]],
+    "judge_dims": ["計數正確", "位置描述正確", "無幻覺"]
+  },
+  {
+    "id": "LOC-02", "category": "物件位置/偵測",
+    "image": "images/coco_000000000724.jpg",
+    "image_url": "http://images.cocodataset.org/val2017/000000000724.jpg",
+    "image_type": "COCO 自然影像：交通標誌（含異常細節）",
+    "prompt": "圖中的交通標誌位於畫面的哪個區域？這個標誌有什麼不尋常之處？背景左側與右側各有什麼？",
+    "reference": "停車再開（STOP）標誌位於畫面上半部中央。不尋常之處：標誌被上下顛倒安裝，STOP 字樣是倒過來的。背景左側有樹與一台工程車/卡車，右側有白色建築與樹。",
+    "keywords": [["STOP", "停"], ["倒", "顛倒", "upside"]],
+    "judge_dims": ["位置正確", "異常偵測", "背景細節"]
+  },
+  {
+    "id": "LOC-03", "category": "物件位置/偵測",
+    "image": "images/coco_000000000139.jpg",
+    "image_url": "http://images.cocodataset.org/val2017/000000000139.jpg",
+    "image_type": "COCO 自然影像：室內多物件定位",
+    "prompt": "請指出以下物件在畫面中的位置（左/中/右、上/下）：電視、站立的人、插著粉紅色花的花瓶、餐桌椅。",
+    "reference": "電視：畫面左側中段；站立的人：畫面中右方、餐桌後方靠近廚房；花瓶（黃綠色、插粉紅花）：畫面右下角的桌上；餐桌椅：畫面正中央。",
+    "keywords": [["左"], ["右下"]],
+    "judge_dims": ["每個物件位置正確", "無遺漏"]
+  },
+  {
+    "id": "LOC-04", "category": "物件位置/偵測",
+    "image": "images/shapes_layout.png",
+    "image_url": null,
+    "image_type": "程式合成圖（座標已知，可算 IoU）",
+    "prompt": "圖中有三個幾何圖形。請以 JSON 輸出每個圖形的顏色、形狀與邊界框，邊界框使用 0~1000 的相對座標 [x1, y1, x2, y2]（左上為原點）。格式：[{\"shape\": \"...\", \"color\": \"...\", \"bbox\": [x1, y1, x2, y2]}]",
+    "reference": "[{\"shape\":\"circle\",\"color\":\"red\",\"bbox\":[67,100,267,400]},{\"shape\":\"square\",\"color\":\"blue\",\"bbox\":[700,150,900,450]},{\"shape\":\"triangle\",\"color\":\"green\",\"bbox\":[400,600,600,900]}]",
+    "keywords": [["圓", "circle"], ["方", "square"], ["三角", "triangle"]],
+    "gt_boxes": {"red": [67, 100, 267, 400], "blue": [700, 150, 900, 450], "green": [400, 600, 600, 900]},
+    "judge_dims": ["形狀/顏色正確", "bbox 精準度 (IoU)"]
+  },
+  {
+    "id": "LOC-05", "category": "物件位置/偵測",
+    "image": "images/coco_000000002153.jpg",
+    "image_url": "http://images.cocodataset.org/val2017/000000002153.jpg",
+    "image_type": "COCO 自然影像：人物相對位置",
+    "prompt": "請描述投手、打擊者、捕手、主審四個人在畫面中的位置與彼此的前後關係。",
+    "reference": "投手在畫面左上方的投手丘上；打擊者在畫面中右方，站在本壘板右側（觀者視角）；捕手蹲在本壘板後方、畫面中下偏左；主審（穿淺藍上衣）在捕手正後方、最靠近鏡頭。",
+    "keywords": [["投手"], ["打擊"], ["捕手"], ["主審", "裁判"]],
+    "judge_dims": ["四人位置正確", "前後關係正確"]
+  },
+
+  {
+    "id": "DEN-01", "category": "密集細節描述",
+    "image": "images/coco_000000001000.jpg",
+    "image_url": "http://images.cocodataset.org/val2017/000000001000.jpg",
+    "image_type": "COCO 自然影像：多人團體照",
+    "prompt": "請盡可能詳細地描述這張圖片，包括人數、服裝、手持物品、場地與背景。只描述你確實看得到的內容。",
+    "reference": "約 12~13 名兒童與青少年在戶外網球場合照，地面為藍色硬地，後方有鐵絲網圍籬與綠色擋牆、樹木。中間穿紅色上衣的男孩手持獎盃；左前方有戴黃色帽子、手拿網球拍的小孩；多人戴棒球帽（白、深藍、紅），有人穿紅色 adidas 上衣、藍色背心女孩、白色上衣。陽光明亮，地上有樹影。",
+    "keywords": [["網球", "tennis"], ["獎盃", "trophy"], ["紅"], ["帽"]],
+    "judge_dims": ["覆蓋度（細節數量）", "正確性", "無幻覺", "條理性"]
+  },
+  {
+    "id": "DEN-02", "category": "密集細節描述",
+    "image": "images/coco_000000005001.jpg",
+    "image_url": "http://images.cocodataset.org/val2017/000000005001.jpg",
+    "image_type": "COCO 自然影像：事件場景",
+    "prompt": "請詳細描述圖片中正在發生的事件，以及至少五位人物的外觀特徵與動作。",
+    "reference": "剪綵儀式：多人一起用大剪刀剪紅色緞帶。前方有戴粉紅/白色自行車安全帽、穿粉紅外套的小女孩，以及戴藍色安全帽的小男孩；光頭戴眼鏡、穿格子襯衫的男子拿著藍色氣球；右側穿深色外套（有徽章）的男子用剪刀剪綵；後方有群眾微笑觀看，右邊有人拿相機拍照；左上方店面招牌寫著「Johnny's」。",
+    "keywords": [["剪綵", "緞帶", "ribbon"], ["剪刀", "scissor"], ["氣球", "balloon"], ["安全帽", "頭盔", "helmet"]],
+    "judge_dims": ["事件理解", "人物細節", "正確性", "無幻覺"]
+  },
+  {
+    "id": "DEN-03", "category": "密集細節描述",
+    "image": "images/coco_000000001268.jpg",
+    "image_url": "http://images.cocodataset.org/val2017/000000001268.jpg",
+    "image_type": "COCO 自然影像：逆光戶外場景",
+    "prompt": "請詳細描述這張圖片：前景、中景、背景各有什麼？光線與氛圍如何？",
+    "reference": "前景：右側一名背著棕色包包的女子正用手機拍照；石板步道。中景：河岸邊有一隻白天鵝、穿紅衣的男子坐在石頭旁、左側有兩個人坐著。背景：河面反光、對岸有樹木與建築物、停泊的船；上方為橋樑的鋼構拱底。光線為逆光（夕陽/強烈陽光反射在水面），氛圍寧靜。",
+    "keywords": [["天鵝", "swan"], ["橋", "bridge"], ["河", "river", "水"], ["拍照", "手機", "phone"]],
+    "judge_dims": ["層次結構", "細節正確", "氛圍描述", "無幻覺"]
+  },
+  {
+    "id": "DEN-04", "category": "密集細節描述",
+    "image": "images/coco_000000000632.jpg",
+    "image_url": "http://images.cocodataset.org/val2017/000000000632.jpg",
+    "image_type": "COCO 自然影像：室內場景（含幻覺陷阱題）",
+    "prompt": "請詳細描述這個房間的擺設。另外，床上有沒有貓？",
+    "reference": "臥室：左下前景為鋪著藍色羽絨被的床；左側有木製五斗櫃，上方有橢圓形鏡子、乳液瓶與盆栽，最左邊牆上有壁燈；中央是大窗戶，窗外為綠樹，窗前有放著愛心抱枕的小椅子與一盆大型綠色植物；右側是塞滿書的書櫃，下方有藤編籃；最右側掛著衣物。牆面為小花壁紙。床上「沒有」貓。",
+    "keywords": [["床", "bed"], ["書", "book"], ["窗", "window"], ["沒有", "no cat", "not"]],
+    "hallucination_trap": true,
+    "judge_dims": ["覆蓋度", "正確性", "幻覺陷阱（必須回答沒有貓）"]
+  },
+
+  {
+    "id": "OCR-01", "category": "圖表/OCR",
+    "image": "images/chart_bar.png",
+    "image_url": null,
+    "image_type": "程式合成長條圖（數值已知）",
+    "prompt": "根據這張長條圖回答：哪一季營收最高？是多少？四季營收總和是多少？",
+    "reference": "Q3 最高，420 萬元；四季總和 180+260+420+340 = 1200 萬元。",
+    "keywords": [["Q3", "第三季"], ["420"], ["1200", "1,200"]],
+    "judge_dims": ["讀值正確", "計算正確"]
+  },
+  {
+    "id": "OCR-02", "category": "圖表/OCR",
+    "image": "images/chart_line.png",
+    "image_url": null,
+    "image_type": "程式合成折線圖（數值已知）",
+    "prompt": "這張折線圖比較了哪兩個城市？台北在幾月氣溫最高、幾度？1 月時哪個城市比較溫暖、相差幾度？",
+    "reference": "台北與高雄。台北 7 月最高 30°C。1 月高雄較溫暖（19°C vs 16°C），相差 3 度。",
+    "keywords": [["台北", "臺北"], ["高雄"], ["30"], ["3"]],
+    "judge_dims": ["圖例辨識", "讀值正確", "比較推理"]
+  },
+  {
+    "id": "OCR-03", "category": "圖表/OCR",
+    "image": "images/chart_pie.png",
+    "image_url": null,
+    "image_type": "程式合成圓餅圖",
+    "prompt": "請列出圓餅圖中每個類別與其百分比，並指出佔比最大的類別。",
+    "reference": "交通 35%、住宿 30%、餐飲 25%、其他 10%；佔比最大為交通（35%）。",
+    "keywords": [["35"], ["30"], ["25"], ["10"], ["交通"]],
+    "judge_dims": ["類別完整", "數值正確"]
+  },
+  {
+    "id": "OCR-04", "category": "圖表/OCR",
+    "image": "images/table_scores.png",
+    "image_url": null,
+    "image_type": "程式合成表格",
+    "prompt": "請將圖中表格轉成 Markdown 表格，並計算李美華三科的平均分數（取小數點後一位）。",
+    "reference": "| 姓名 | 國文 | 英文 | 數學 |\n| 王小明 | 85 | 92 | 78 |\n| 李美華 | 90 | 88 | 95 |\n| 陳志強 | 72 | 80 | 88 |\n李美華平均 = (90+88+95)/3 = 91.0",
+    "keywords": [["王小明"], ["李美華"], ["陳志強"], ["91"]],
+    "judge_dims": ["表格結構還原", "OCR 準確", "計算正確"]
+  },
+  {
+    "id": "OCR-05", "category": "圖表/OCR",
+    "image": "images/ocr_receipt.png",
+    "image_url": null,
+    "image_type": "程式合成繁體中文收據",
+    "prompt": "請從這張收據中擷取資訊，輸出 JSON：{\"store\": 店名, \"datetime\": 日期時間, \"items\": [{\"name\":..., \"qty\":..., \"price\":...}], \"total\": 合計, \"invoice_no\": 發票號碼}",
+    "reference": "{\"store\":\"好日子咖啡館\",\"datetime\":\"2024/03/15 14:32\",\"items\":[{\"name\":\"拿鐵\",\"qty\":2,\"price\":240},{\"name\":\"司康\",\"qty\":1,\"price\":85},{\"name\":\"檸檬塔\",\"qty\":1,\"price\":110}],\"total\":435,\"invoice_no\":\"AB-12345678\"}",
+    "keywords": [["好日子咖啡"], ["435"], ["AB-12345678"], ["拿鐵"]],
+    "judge_dims": ["欄位完整", "OCR 準確", "JSON 格式正確"]
+  },
+  {
+    "id": "OCR-06", "category": "圖表/OCR",
+    "image": "images/ocr_sign.png",
+    "image_url": null,
+    "image_type": "程式合成告示牌（繁中）",
+    "prompt": "請完整轉錄告示牌上的所有文字，並回答：星期六幾點閉館？星期日可以去嗎？",
+    "reference": "國立示範大學 圖書館／開放時間：週一至週五 08:00–22:00／週六 09:00–17:00 週日休館／請勿飲食 · 保持安靜。週六 17:00 閉館；週日休館，不能去。",
+    "keywords": [["圖書館"], ["17:00", "下午五"], ["休館", "不"]],
+    "judge_dims": ["轉錄完整度", "OCR 準確", "問答正確"]
+  }
+]

@@ -1,0 +1,535 @@
+{
+  "summary": [
+    {
+      "model": "base",
+      "pure_trad_rate": 0.5667,
+      "simp_char_ratio": 0.0474,
+      "cjk_ratio": 0.8414,
+      "avg_new_tokens": 265.4333,
+      "mmlu_acc": 0.57
+    },
+    {
+      "model": "dpo",
+      "pure_trad_rate": 0.5,
+      "simp_char_ratio": 0.0052,
+      "cjk_ratio": 0.8307,
+      "avg_new_tokens": 258.6667,
+      "mmlu_acc": 0.59
+    },
+    {
+      "model": "delta (dpo-base)",
+      "pure_trad_rate": -0.06669999999999998,
+      "simp_char_ratio": -0.0422,
+      "cjk_ratio": -0.010700000000000043,
+      "avg_new_tokens": -6.766599999999983,
+      "mmlu_acc": 0.020000000000000018
+    }
+  ],
+  "mmlu_mcnemar": {
+    "base_only_correct": 1,
+    "dpo_only_correct": 3,
+    "p_value": 0.625
+  },
+  "mmlu_per_subject": [
+    {
+      "subject": "logical_fallacies",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "high_school_government_and_politics",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "public_relations",
+      "base": false,
+      "dpo": false
+    },
+    {
+      "subject": "computer_security",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "formal_logic",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "high_school_computer_science",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "security_studies",
+      "base": false,
+      "dpo": false
+    },
+    {
+      "subject": "virology",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "human_sexuality",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "high_school_chemistry",
+      "base": false,
+      "dpo": false
+    },
+    {
+      "subject": "college_medicine",
+      "base": false,
+      "dpo": false
+    },
+    {
+      "subject": "philosophy",
+      "base": false,
+      "dpo": false
+    },
+    {
+      "subject": "high_school_world_history",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "jurisprudence",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "high_school_us_history",
+      "base": false,
+      "dpo": true
+    },
+    {
+      "subject": "miscellaneous",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "business_ethics",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "high_school_european_history",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "professional_law",
+      "base": false,
+      "dpo": false
+    },
+    {
+      "subject": "clinical_knowledge",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "high_school_statistics",
+      "base": false,
+      "dpo": false
+    },
+    {
+      "subject": "college_physics",
+      "base": false,
+      "dpo": false
+    },
+    {
+      "subject": "management",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "high_school_geography",
+      "base": false,
+      "dpo": false
+    },
+    {
+      "subject": "marketing",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "high_school_macroeconomics",
+      "base": false,
+      "dpo": false
+    },
+    {
+      "subject": "abstract_algebra",
+      "base": false,
+      "dpo": false
+    },
+    {
+      "subject": "moral_disputes",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "high_school_mathematics",
+      "base": false,
+      "dpo": false
+    },
+    {
+      "subject": "professional_medicine",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "high_school_biology",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "high_school_psychology",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "prehistory",
+      "base": false,
+      "dpo": false
+    },
+    {
+      "subject": "high_school_microeconomics",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "conceptual_physics",
+      "base": false,
+      "dpo": false
+    },
+    {
+      "subject": "world_religions",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "human_aging",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "professional_psychology",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "econometrics",
+      "base": false,
+      "dpo": false
+    },
+    {
+      "subject": "nutrition",
+      "base": false,
+      "dpo": false
+    },
+    {
+      "subject": "us_foreign_policy",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "astronomy",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "high_school_physics",
+      "base": false,
+      "dpo": false
+    },
+    {
+      "subject": "machine_learning",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "college_biology",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "international_law",
+      "base": false,
+      "dpo": false
+    },
+    {
+      "subject": "moral_scenarios",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "college_chemistry",
+      "base": false,
+      "dpo": false
+    },
+    {
+      "subject": "sociology",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "college_mathematics",
+      "base": false,
+      "dpo": false
+    },
+    {
+      "subject": "electrical_engineering",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "elementary_mathematics",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "global_facts",
+      "base": false,
+      "dpo": false
+    },
+    {
+      "subject": "professional_accounting",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "anatomy",
+      "base": false,
+      "dpo": false
+    },
+    {
+      "subject": "college_computer_science",
+      "base": false,
+      "dpo": false
+    },
+    {
+      "subject": "medical_genetics",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "logical_fallacies",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "high_school_government_and_politics",
+      "base": false,
+      "dpo": false
+    },
+    {
+      "subject": "public_relations",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "computer_security",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "formal_logic",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "high_school_computer_science",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "security_studies",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "virology",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "human_sexuality",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "high_school_chemistry",
+      "base": false,
+      "dpo": false
+    },
+    {
+      "subject": "college_medicine",
+      "base": false,
+      "dpo": false
+    },
+    {
+      "subject": "philosophy",
+      "base": false,
+      "dpo": true
+    },
+    {
+      "subject": "high_school_world_history",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "jurisprudence",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "high_school_us_history",
+      "base": false,
+      "dpo": true
+    },
+    {
+      "subject": "miscellaneous",
+      "base": false,
+      "dpo": false
+    },
+    {
+      "subject": "business_ethics",
+      "base": false,
+      "dpo": false
+    },
+    {
+      "subject": "high_school_european_history",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "professional_law",
+      "base": false,
+      "dpo": false
+    },
+    {
+      "subject": "clinical_knowledge",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "high_school_statistics",
+      "base": false,
+      "dpo": false
+    },
+    {
+      "subject": "college_physics",
+      "base": false,
+      "dpo": false
+    },
+    {
+      "subject": "management",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "high_school_geography",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "marketing",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "high_school_macroeconomics",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "abstract_algebra",
+      "base": false,
+      "dpo": false
+    },
+    {
+      "subject": "moral_disputes",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "high_school_mathematics",
+      "base": false,
+      "dpo": false
+    },
+    {
+      "subject": "professional_medicine",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "high_school_biology",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "high_school_psychology",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "prehistory",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "high_school_microeconomics",
+      "base": true,
+      "dpo": false
+    },
+    {
+      "subject": "conceptual_physics",
+      "base": false,
+      "dpo": false
+    },
+    {
+      "subject": "world_religions",
+      "base": false,
+      "dpo": false
+    },
+    {
+      "subject": "human_aging",
+      "base": false,
+      "dpo": false
+    },
+    {
+      "subject": "professional_psychology",
+      "base": false,
+      "dpo": false
+    },
+    {
+      "subject": "econometrics",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "nutrition",
+      "base": false,
+      "dpo": false
+    },
+    {
+      "subject": "us_foreign_policy",
+      "base": true,
+      "dpo": true
+    },
+    {
+      "subject": "astronomy",
+      "base": false,
+      "dpo": false
+    },
+    {
+      "subject": "high_school_physics",
+      "base": false,
+      "dpo": false
+    }
+  ]
+}

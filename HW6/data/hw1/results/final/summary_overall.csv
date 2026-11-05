@@ -1,0 +1,10 @@
+﻿precision,strategy,correctness,instruction_following,clarity,overall,new_tokens
+fp16,cot,8.55,8.5,8.7,8.57,314.05
+fp16,few_shot,8.9,9.05,9.4,9.04,191.85
+fp16,zero_shot,8.6,8.85,9.05,8.76,226.1
+int4,cot,8.35,8.9,9.05,8.65,333.35
+int4,few_shot,9.75,9.45,9.8,9.67,194.25
+int4,zero_shot,8.7,8.95,9.1,8.86,228.4
+int8,cot,8.55,8.4,9.1,8.62,302.4
+int8,few_shot,9.2,9.5,9.6,9.37,191.4
+int8,zero_shot,9.3,9.0,9.4,9.23,227.95

@@ -1,0 +1,19 @@
+# 已在 Python 3.12 + CUDA 12.1 + V100 32GB 實測可用的版本組合
+# torch 請依 CUDA 版本安裝：pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cu121
+transformers==4.47.1
+accelerate==1.2.1
+bitsandbytes==0.45.0
+peft==0.14.0
+trl==0.13.0
+datasets==3.2.0
+opencc-python-reimplemented==0.1.7
+openai>=1.50
+anthropic>=0.40
+nvidia-ml-py
+pandas
+matplotlib
+tabulate
+pillow
+requests
+ipykernel
+nbconvert

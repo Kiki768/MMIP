@@ -1,0 +1,3 @@
+﻿model,images,halluc_object_rate,halluc_image_rate,mentioned_per_image
+base,50,0.15,0.22,1.6
+dpo,50,0.137,0.2,1.46

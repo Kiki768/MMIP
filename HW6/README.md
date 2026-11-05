@@ -79,6 +79,3 @@ export JUDGE_PROVIDER=anthropic ANTHROPIC_API_KEY=sk-ant-... JUDGE_MODEL=claude-
 jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.timeout=-1 main.ipynb
 ```
 
-每個耗時步驟都會先檢查 `data/` 裡是否已有結果，有就直接讀取，沒有才執行；把 notebook 開頭的 `FORCE_RERUN` 設成 `True` 可全部重跑（V100 約 5~6 小時，其中 VLM 微調流程約 3 小時）。沒有設定 API key 時，評分步驟會自動略過，其他部分照常執行。
-
-各腳本也可以單獨執行，參數用 `python src/<hw>/<script>.py --help` 查看。

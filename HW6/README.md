@@ -56,7 +56,7 @@ pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorc
 pip install -r requirements.txt
 ```
 
-評審需要一組 API key，在啟動 Jupyter 之前於終端機設定。三種都可以：
+需要一組 API key，在啟動 Jupyter 之前於終端機設定。三種都可以：
 
 ```bash
 # Google Gemini（OpenAI 相容介面，有免費額度）

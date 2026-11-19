@@ -1,0 +1,293 @@
+{
+  "spec_name": "RoutingDecision",
+  "version": "1.0",
+  "json_schema": {
+    "$defs": {
+      "ExtractedEntities": {
+        "additionalProperties": false,
+        "properties": {
+          "order_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "description": "訂單編號，例如 ORD-20261103-0042",
+            "title": "Order Id"
+          },
+          "product": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "description": "商品名稱或型號",
+            "title": "Product"
+          },
+          "amount": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "description": "金額（新台幣）",
+            "title": "Amount"
+          },
+          "error_code": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "description": "系統錯誤代碼，例如 E-1024",
+            "title": "Error Code"
+          }
+        },
+        "title": "ExtractedEntities",
+        "type": "object"
+      },
+      "ImageAnalysis": {
+        "additionalProperties": false,
+        "properties": {
+          "has_image": {
+            "description": "本輪是否附圖",
+            "title": "Has Image",
+            "type": "boolean"
+          },
+          "image_type": {
+            "$ref": "#/$defs/ImageType",
+            "description": "圖片類型"
+          },
+          "description": {
+            "description": "一句話描述圖片中與客服相關的內容",
+            "title": "Description",
+            "type": "string"
+          }
+        },
+        "required": [
+          "has_image",
+          "image_type",
+          "description"
+        ],
+        "title": "ImageAnalysis",
+        "type": "object"
+      },
+      "ImageType": {
+        "enum": [
+          "none",
+          "product_damage",
+          "receipt_invoice",
+          "error_screenshot",
+          "package_label",
+          "other"
+        ],
+        "title": "ImageType",
+        "type": "string"
+      },
+      "SafetyFlag": {
+        "enum": [
+          "safe",
+          "prompt_injection",
+          "jailbreak",
+          "image_injection",
+          "pii_exposure",
+          "harmful"
+        ],
+        "title": "SafetyFlag",
+        "type": "string"
+      },
+      "Sentiment": {
+        "enum": [
+          "positive",
+          "neutral",
+          "negative",
+          "angry"
+        ],
+        "title": "Sentiment",
+        "type": "string"
+      },
+      "Urgency": {
+        "enum": [
+          "low",
+          "medium",
+          "high",
+          "critical"
+        ],
+        "title": "Urgency",
+        "type": "string"
+      }
+    },
+    "additionalProperties": false,
+    "description": "分流節點的結構化輸出。",
+    "properties": {
+      "department": {
+        "description": "應轉接的部門 ID",
+        "enum": [
+          "billing",
+          "technical_support",
+          "logistics",
+          "returns_refunds",
+          "account_security",
+          "sales",
+          "human_agent"
+        ],
+        "title": "Department",
+        "type": "string"
+      },
+      "intent": {
+        "description": "使用者意圖，snake_case，例如 refund_damaged_item",
+        "title": "Intent",
+        "type": "string"
+      },
+      "urgency": {
+        "$ref": "#/$defs/Urgency"
+      },
+      "sentiment": {
+        "$ref": "#/$defs/Sentiment"
+      },
+      "requires_human": {
+        "description": "是否需要真人介入",
+        "title": "Requires Human",
+        "type": "boolean"
+      },
+      "is_off_topic": {
+        "description": "本輪是否與客服業務無關",
+        "title": "Is Off Topic",
+        "type": "boolean"
+      },
+      "safety_flag": {
+        "$ref": "#/$defs/SafetyFlag"
+      },
+      "confidence": {
+        "maximum": 1.0,
+        "minimum": 0.0,
+        "title": "Confidence",
+        "type": "number"
+      },
+      "entities": {
+        "$ref": "#/$defs/ExtractedEntities"
+      },
+      "image_analysis": {
+        "$ref": "#/$defs/ImageAnalysis"
+      },
+      "context_summary": {
+        "description": "整合多輪脈絡後的一句話摘要",
+        "title": "Context Summary",
+        "type": "string"
+      }
+    },
+    "required": [
+      "department",
+      "intent",
+      "urgency",
+      "sentiment",
+      "requires_human",
+      "is_off_topic",
+      "safety_flag",
+      "confidence",
+      "entities",
+      "image_analysis",
+      "context_summary"
+    ],
+    "title": "RoutingDecision",
+    "type": "object"
+  },
+  "departments": {
+    "billing": {
+      "name_zh": "帳務與付款",
+      "description": "扣款、重複扣款、發票、退款進度查詢、付款失敗",
+      "required_slots": [
+        "order_id"
+      ]
+    },
+    "technical_support": {
+      "name_zh": "技術支援",
+      "description": "App/網站錯誤、登入以外的系統故障、裝置連線、錯誤代碼",
+      "required_slots": [
+        "error_code"
+      ]
+    },
+    "logistics": {
+      "name_zh": "物流配送",
+      "description": "出貨進度、配送延遲、包裹遺失、改地址",
+      "required_slots": [
+        "order_id"
+      ]
+    },
+    "returns_refunds": {
+      "name_zh": "退換貨",
+      "description": "商品瑕疵、破損、退貨、換貨、鑑賞期",
+      "required_slots": [
+        "order_id",
+        "product"
+      ]
+    },
+    "account_security": {
+      "name_zh": "帳號安全",
+      "description": "盜用、異常登入、密碼重設、雙因素驗證",
+      "required_slots": []
+    },
+    "sales": {
+      "name_zh": "售前諮詢",
+      "description": "商品規格、價格、優惠、庫存、方案比較",
+      "required_slots": []
+    },
+    "human_agent": {
+      "name_zh": "真人客服",
+      "description": "使用者明確要求真人、高度不滿、或機器無法處理之情境",
+      "required_slots": []
+    }
+  },
+  "example_input": {
+    "history": [
+      {
+        "role": "user",
+        "content": "請問 ORD-20261103-0042 什麼時候會到？"
+      },
+      {
+        "role": "assistant",
+        "content": "您的包裹已於今日送達超商。"
+      }
+    ],
+    "user_message": "拿到了，但充電盒整個裂開，我要退貨，照片給你看",
+    "image": "<product_damage.png>"
+  },
+  "example_output": {
+    "department": "returns_refunds",
+    "intent": "return_damaged_item",
+    "urgency": "high",
+    "sentiment": "negative",
+    "requires_human": false,
+    "is_off_topic": false,
+    "safety_flag": "safe",
+    "confidence": 0.93,
+    "entities": {
+      "order_id": "ORD-20261103-0042",
+      "product": "SoundMax 藍牙耳機 X2",
+      "amount": 2490.0,
+      "error_code": null
+    },
+    "image_analysis": {
+      "has_image": true,
+      "image_type": "product_damage",
+      "description": "耳機充電盒外殼右側明顯裂痕，包裝盒角落凹陷"
+    },
+    "context_summary": "使用者上一輪詢問到貨時間，本輪表示收到的耳機充電盒破裂，要求退貨並附上照片。"
+  }
+}

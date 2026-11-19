@@ -1,0 +1,30 @@
+# 核心
+pydantic>=2.6
+numpy>=1.26
+pandas>=2.0
+scikit-learn>=1.3        # 只用到 feature_extraction（TF-IDF / Hashing）
+torch>=2.1               # Exp B：LoRA 微調；local 後端需 CUDA 版（本機測試：2.5.1+cu121）
+pillow>=10.0
+matplotlib>=3.8
+
+# 本機開源 VLM 後端（CHATBOT_LLM_BACKEND=local，免費）：Qwen/Qwen2-VL-2B-Instruct
+# transformers 5.x 需要 torch>=2.6；torch 2.5 請用 4.57 系列，並搭配 huggingface_hub<1.0
+transformers==4.57.6
+accelerate>=1.0
+peft>=0.13               # Exp B：對 Qwen/Qwen2.5-0.5B-Instruct 做 LoRA SFT
+huggingface_hub<1.0
+
+# Claude 後端（選用、付費；未安裝或無憑證時自動改用 local / 離線模擬）
+anthropic
+
+# 作業三 UI（gradio 6 需要 huggingface_hub>=1.16，與 transformers 4.57 衝突，故使用 5.x）
+gradio>=5.40,<6
+
+# 執行 main.ipynb
+ipykernel
+nbformat
+nbclient
+
+# Windows「應用程式控制原則」會封鎖剛發布、尚未累積信譽的原生套件 DLL；
+# 若出現「DLL load failed ... 應用程式控制原則已封鎖此檔案」，請改裝較舊版本，例如：
+#   regex==2025.10.22   jiter==0.11.1

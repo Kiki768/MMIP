@@ -1,0 +1,6 @@
+﻿experiment,engine,n_samples,schema_valid_strict_%,schema_valid_lenient_%,department_acc_%,urgency_acc_%,sentiment_acc_%,off_topic_acc_%,safety_acc_%,requires_human_acc_%,image_type_acc_%,order_id_acc_%,overall_field_acc_%,latency_mean_s,latency_p95_s,avg_input_tokens,avg_output_tokens,cost_per_1k_req_usd,escalation_rate_%,latency_source
+A: Prompt Engineering,A_prompt,16,31.2,31.2,12.5,18.8,12.5,31.2,12.5,18.8,12.5,28.6,18.4,16.7856,21.9379,1612.6,134.1,0.033571,0.0,measured
+B: SFT + LoRA,B_lora_sft,16,93.8,93.8,87.5,75.0,81.2,93.8,93.8,93.8,62.5,85.7,84.2,15.3675,19.1797,108.0,154.3,0.030735,0.0,measured
+C: Constrained Decoding,C_constrained,16,100.0,100.0,37.5,43.8,43.8,93.8,68.8,75.0,62.5,85.7,63.9,19.9412,24.0602,1612.6,161.2,0.039882,0.0,measured
+D: System One,D_system_one,16,100.0,100.0,75.0,93.8,81.2,100.0,100.0,81.2,68.8,100.0,87.5,0.0083,0.0231,0.0,0.0,0.0001,0.0,measured
+D→C: Cascade,DC_cascade,16,100.0,100.0,56.2,68.8,68.8,100.0,81.2,75.0,68.8,85.7,75.6,13.1551,21.8078,1029.4,102.4,0.026339,62.5,mixed
